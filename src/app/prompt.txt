@@ -1,0 +1,211 @@
+I have an existing repository:
+
+GitHub Repo: https://github.com/Attaint54/new-repo.git
+
+I want you to transform this repository into a premium portfolio website inspired by the design, layout, interactions, and user experience of:
+
+Reference Website: https://www.syedmuhammadarhamali.com/
+
+Do NOT copy the source code directly. Rebuild it from scratch while taking inspiration from the overall look and feel.
+
+Important Requirements
+Keep the same modern and professional aesthetic as the reference.
+The website must represent me (Atta-ul-Bari), not Syed Muhammad Arham Ali.
+Replace all his content with my own content.
+Use my own image, projects, social links, and information.
+The final code must be original, clean, and production-ready.
+Tech Stack
+
+Use the same stack already present in my repository.
+
+If the repository is empty or incomplete, use:
+
+Next.js (App Router)
+TypeScript
+Tailwind CSS
+Framer Motion
+React Icons
+Design Requirements
+
+Create a beautiful dark-themed portfolio with smooth animations.
+
+Include:
+
+1. Navbar
+Sticky navigation
+Smooth scrolling
+Mobile hamburger menu
+Sections:
+Home
+About
+Skills
+Projects
+Contact
+2. Hero Section
+
+Similar feel to the reference website.
+
+Include:
+
+My professional photo
+Greeting:
+"Hi, my name is"
+"Atta-ul-Bari"
+Short introduction:
+Full Stack Developer
+MERN Stack Developer
+Frontend Developer
+Availability badge:
+"Open to Freelance Opportunities"
+Resume download button
+GitHub button
+LinkedIn button
+3. About Section
+
+Write professional content about me.
+
+Mention that I:
+
+Build modern web applications.
+Work with MERN technologies.
+Love creating responsive interfaces.
+Continuously learn new technologies.
+4. Skills Section
+
+Display skills as modern badges/cards.
+
+Frontend:
+
+HTML
+CSS
+JavaScript
+TypeScript
+React
+Next.js
+Tailwind CSS
+
+Backend:
+
+Node.js
+Express.js
+MongoDB
+
+Tools:
+
+Git
+GitHub
+VS Code
+Postman
+5. Featured Projects Section
+
+Automatically populate projects from my GitHub repositories where possible.
+
+Use GitHub API.
+
+Display:
+
+Project image
+Title
+Description
+Technologies used
+Live Demo button
+GitHub button
+
+Prioritize showcasing projects such as:
+
+E-commerce applications
+Authentication projects
+Portfolio projects
+CRUD applications
+
+If project images are missing, generate attractive placeholders.
+
+6. Project Detail Cards
+
+Use hover effects similar to the reference:
+
+Glassmorphism
+Scale animation
+Smooth transitions
+Framer Motion animations
+7. Contact Section
+
+Include:
+
+Contact form
+Email field
+Name field
+Message field
+
+Use EmailJS for sending emails.
+
+Show success and error messages.
+
+Also display:
+
+GitHub
+LinkedIn
+Fiverr
+Upwork
+
+social links.
+
+8. Footer
+
+Include:
+
+© 2026 Atta-ul-Bari. All rights reserved.
+
+Plus:
+
+Back to top button
+Social icons
+Performance Requirements
+Fully responsive.
+Mobile-first design.
+SEO optimized.
+Lazy-load images.
+Optimize performance.
+Use Next.js Image component.
+Accessibility support.
+Fast loading.
+Animations
+
+Use Framer Motion throughout the site:
+
+Fade-up on scroll.
+Staggered animations.
+Smooth hover effects.
+Animated section entrances.
+Animated mobile menu.
+
+Keep animations elegant and not excessive.
+
+Personal Assets
+
+Create a folder structure so I can easily replace:
+
+/public/profile.jpg
+/public/resume.pdf
+/public/projects/*
+
+Use these assets automatically throughout the site.
+
+Final Tasks
+
+After implementation:
+
+Fix all TypeScript and ESLint errors.
+Ensure npm install and npm run dev work without issues.
+Test responsiveness.
+Build successfully using npm run build.
+Commit all changes.
+Push the completed work to my GitHub repository.
+Update the README with:
+Features
+Tech Stack
+Setup Instructions
+Screenshots
+Deployment Guide.
+
+The final result should feel as polished and premium as the reference website while being a unique portfolio built around my identity, projects, and achievements. The code must be maintainable, reusable, and ready for deployment.

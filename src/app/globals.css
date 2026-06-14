@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #111111;
+  --color-bg-card: #1a1a1a;
+  --color-accent: #60a5fa;
+  --color-accent-light: rgba(96, 165, 250, 0.1);
+  --color-accent-glow: rgba(96, 165, 250, 0.15);
+  --color-text: #a3a3a3;
+  --color-text-light: #d4d4d4;
+  --color-heading: #f5f5f5;
+  --color-border: rgba(255, 255, 255, 0.05);
+  --font-signature: "Great Vibes", "Pacifico", cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+::selection {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.bg-torch {
+  background-image: radial-gradient(
+    525px at 50% 50%,
+    var(--color-accent-glow),
+    transparent 80%
+  );
+}
+
+.glass {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+}
+
+.section-heading {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .section-heading {
+    font-size: 2.25rem;
+  }
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--color-bg-card);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s;
+}
+
+.skill-badge:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
