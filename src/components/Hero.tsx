@@ -68,7 +68,7 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-4 mt-8"
           >
             <a
-              href="/resume.pdf"
+              href="/CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-medium text-sm hover:bg-blue-400 transition-all duration-200"
@@ -86,7 +86,7 @@ export default function Hero() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/atta-ul-bari"
+              href="https://www.linkedin.com/in/attaul-bari-3849a7362"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-light hover:text-accent hover:border-accent transition-all duration-200 text-sm"

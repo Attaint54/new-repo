@@ -140,7 +140,7 @@ export default function Contact() {
               </span>
             </a>
             <a
-              href="https://linkedin.com/in/atta-ul-bari"
+              href="https://www.linkedin.com/in/attaul-bari-3849a7362"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 rounded-lg glass hover:border-accent/30 transition-all group"
@@ -151,7 +151,7 @@ export default function Contact() {
               </span>
             </a>
             <a
-              href="https://fiverr.com"
+              href="https://www.fiverr.com/atta_ul_bari"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 rounded-lg glass hover:border-accent/30 transition-all group"
@@ -162,7 +162,7 @@ export default function Contact() {
               </span>
             </a>
             <a
-              href="https://upwork.com"
+              href="https://www.upwork.com/freelancers/~018948a10d2eb4b23e"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 rounded-lg glass hover:border-accent/30 transition-all group"

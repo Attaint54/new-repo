@@ -41,7 +41,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-4 py-1.5 rounded border border-accent text-accent hover:bg-accent-light transition-all duration-200"
@@ -79,7 +79,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/resume.pdf"
+                href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}

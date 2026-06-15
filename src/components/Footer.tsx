@@ -6,9 +6,9 @@ import { SiFiverr, SiUpwork } from "react-icons/si";
 
 const socials = [
   { icon: FiGithub, href: "https://github.com/Attaint54", label: "GitHub" },
-  { icon: FiLinkedin, href: "https://linkedin.com/in/atta-ul-bari", label: "LinkedIn" },
-  { icon: SiFiverr, href: "https://fiverr.com", label: "Fiverr" },
-  { icon: SiUpwork, href: "https://upwork.com", label: "Upwork" },
+  { icon: FiLinkedin, href: "https://www.linkedin.com/in/attaul-bari-3849a7362", label: "LinkedIn" },
+  { icon: SiFiverr, href: "https://www.fiverr.com/atta_ul_bari", label: "Fiverr" },
+  { icon: SiUpwork, href: "https://www.upwork.com/freelancers/~018948a10d2eb4b23e", label: "Upwork" },
   { icon: FiTwitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
