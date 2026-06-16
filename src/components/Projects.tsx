@@ -10,7 +10,7 @@ import {
   FiFolder,
   FiCode,
 } from "react-icons/fi";
-
+// newwwwwwwwwwwwwwwww
 interface FeaturedProject {
   id: number;
   title: string;
@@ -20,7 +20,7 @@ interface FeaturedProject {
   github: string;
   technologies: string[];
 }
-
+// asdasdasd
 interface GitHubRepo {
   id: number;
   name: string;
