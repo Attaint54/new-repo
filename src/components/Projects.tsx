@@ -138,7 +138,7 @@ export default function Projects() {
     const fetchRepos = async () => {
       try {
         const res = await fetch(
-          "https://api.github.com/users/Attaint54/repos?sort=updated&per_page=30"
+          "https://api.github.com/users/Attaint54/repos?sort=updated&per_page=100"
         );
         if (res.ok) {
           const data: GitHubRepo[] = await res.json();
@@ -260,7 +260,7 @@ export default function Projects() {
             viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
-            {repos.map((repo, idx) => (
+            {repos.slice(0, 4).map((repo, idx) => (
               <motion.a
                 key={repo.id}
                 href={repo.homepage || repo.html_url}

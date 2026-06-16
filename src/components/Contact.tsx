@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiSend, FiMail, FiUser, FiMessageSquare } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
@@ -9,26 +9,34 @@ import {
   SiFiverr,
   SiUpwork,
 } from "react-icons/si";
-import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!formRef.current) return;
-
     setStatus("sending");
+
+    const form = e.currentTarget;
+    const data = {
+      user_name: (form.elements.namedItem("user_name") as HTMLInputElement).value,
+      user_email: (form.elements.namedItem("user_email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
     try {
-      await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        formRef.current,
-        "YOUR_PUBLIC_KEY"
-      );
-      setStatus("success");
-      formRef.current.reset();
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
@@ -56,7 +64,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-3"
           >
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div className="relative">
                 <FiUser
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-text"
