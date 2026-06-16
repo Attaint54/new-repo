@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<string>("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,12 +35,13 @@ export default function Contact() {
         setStatus("success");
         form.reset();
       } else {
-        setStatus("error");
+        const body = await res.json().catch(() => ({}));
+        setStatus(body.error || "error");
       }
-    } catch {
-      setStatus("error");
+    } catch (e) {
+      setStatus(e instanceof Error ? e.message : "error");
     }
-    setTimeout(() => setStatus("idle"), 4000);
+    setTimeout(() => setStatus("idle"), 8000);
   };
 
   return (
@@ -117,9 +118,11 @@ export default function Contact() {
                   Message sent successfully!
                 </p>
               )}
-              {status === "error" && (
+              {status !== "idle" && status !== "sending" && status !== "success" && (
                 <p className="text-red-400 text-sm">
-                  Failed to send. Please try again.
+                  {status === "error"
+                    ? "Failed to send. Please try again."
+                    : status}
                 </p>
               )}
             </form>
