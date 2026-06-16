@@ -4,7 +4,7 @@ import "./globals.css";
 import CursorFollower from "@/components/CursorFollower";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

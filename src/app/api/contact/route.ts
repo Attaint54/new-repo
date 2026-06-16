@@ -13,7 +13,9 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.SMTP_EMAIL,
         pass: process.env.SMTP_PASSWORD,
@@ -40,9 +42,12 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    const errorMessage =
+      err instanceof Error ? err.message : "Unknown error";
+    console.error("Contact form error:", errorMessage);
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: errorMessage },
       { status: 500 }
     );
   }
