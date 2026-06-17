@@ -84,6 +84,16 @@ const featuredProjects: FeaturedProject[] = [
     github: "https://github.com/Attaint54",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
   },
+  {
+    id: 6,
+    title: "OLX Clone",
+    description:
+      "A full-featured classifieds marketplace clone inspired by OLX. Built with Next.js and Axios, it allows users to browse listings by category (smartphones, laptops, cars, furniture), search products, and post ads with a modern, responsive UI.",
+    image: "/projects/OLX.png",
+    liveDemo: "https://olx-cloi-bice.vercel.app/",
+    github: "https://github.com/Attaint54",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Axios"],
+  },
 ];
 
 const containerVariants = {
